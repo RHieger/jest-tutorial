@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "eslint": "^7.0.0",
+    "eslint-config-optimum-energy": "^0.6.3",
     "jest": "^26.0.1"
   }
 }
