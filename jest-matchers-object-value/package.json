@@ -2,7 +2,7 @@
   "name": "jest-matchers-object-value",
   "version": "1.0.0",
   "description": "Common Matchers--Value of an Object",
-  "main": "sum.js",
+  "main": "getValue.js",
   "repository": "https://github.com/RHieger/jest-tutorial/tree/jest-matchers-object-value",
   "author": "Robert Hieger",
   "license": "MIT",
