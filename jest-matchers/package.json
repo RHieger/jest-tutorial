@@ -1,0 +1,10 @@
+{
+  "name": "jest-matchers",
+  "version": "1.0.0",
+  "description": "Using Matchers--Common Matchers",
+  "main": "sum.js",
+  "repository": "https://github.com/RHieger/jest-tutorial/tree/jest-matchers",
+  "author": "Robert Hieger",
+  "license": "MIT",
+  "private": false
+}
