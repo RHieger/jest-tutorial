@@ -1,0 +1,13 @@
+{
+  "name": "jest-matchers",
+  "version": "1.0.0",
+  "description": "Common Matchers--Value with Exact Equality",
+  "main": "sum.js",
+  "repository": "https://github.com/RHieger/jest-tutorial/tree/jest-matchers",
+  "author": "Robert Hieger",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest"
+  }
+}
