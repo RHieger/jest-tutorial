@@ -1,4 +1,4 @@
-const getValue = require('./getValue');
+const getValue = require('../source/getValue');
 
 test("object assignment", () => {
   const data = { one: 1 };
