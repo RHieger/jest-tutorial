@@ -1,0 +1,9 @@
+{
+  "name": "arrays-iterables",
+  "version": "1.0.0",
+  "description": "Arrays and Iterables Testing",
+  "main": "index.js",
+  "author": "Robert Hieger",
+  "license": "MIT",
+  "private": false
+}
