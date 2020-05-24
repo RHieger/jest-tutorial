@@ -35,6 +35,23 @@ const peripherals = [
   "wireless bluetooth speaker"
 ];
 
+const groceries = [
+  "1 dozen eggs",
+  "milk",
+  "2 boxes golden raisins",
+  "2 containers whipped butter",
+  "oatmeal",
+  "chick pea paella",
+  "sparkling ice drinks",
+  "fruit juice",
+  "2 lbs. seedless grapes",
+  "2 lb. navel oranges",
+  "10 bananas",
+  "1 bunch broccoli",
+  "2 boxes no sugar added crunchy Klondike bars",
+  "2 cannisters ground French Vanilla Coffee"
+];
+
 test("the peripherals list contains 6TB USB C HD portable", () => {
   expect(peripherals).toContain("6TB USB C HD portable");
 });
@@ -43,4 +60,14 @@ test("the peripherals list contains 6TB USB C HD portable", () => {
 
 test("the peripherals list does not contain HD Web Cam", () => {
   expect(peripherals).not.toContain("HD Web Cam");
+});
+
+// Matcher: toHaveLength
+
+test("the peripherals list has 10 elements", () => {
+  expect(peripherals).toHaveLength(10);
+});
+
+test("groceries list has 14 elements", () => {
+  expect(groceries).toHaveLength(14);
 });
