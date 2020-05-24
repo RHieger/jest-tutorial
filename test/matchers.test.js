@@ -9,6 +9,17 @@ test("returned message is Hello, World!", () => {
   expect(greeting()).toBe("Hello, World!");
 });
 
+// Matcher: value not
+
+const greeting2 = () => {
+  let message = "Goodbye, World!";
+  return message;
+}
+
+test("returned message is not Hello, World!", () => {
+  expect(greeting2()).not.toBe("Hello, World!");
+});
+
 // Matcher: toContain
 
 const peripherals = [
