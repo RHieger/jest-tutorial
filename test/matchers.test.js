@@ -9,7 +9,7 @@ test("returned message is Hello, World!", () => {
   expect(greeting()).toBe("Hello, World!");
 });
 
-// Matcher: value not
+// Matcher: not value
 
 const greeting2 = () => {
   let message = "Goodbye, World!";
@@ -37,4 +37,10 @@ const peripherals = [
 
 test("the peripherals list contains 6TB USB C HD portable", () => {
   expect(peripherals).toContain("6TB USB C HD portable");
+});
+
+// Matcher: not toContain
+
+test("the peripherals list does not contain HD Web Cam", () => {
+  expect(peripherals).not.toContain("HD Web Cam");
 });
