@@ -97,3 +97,15 @@ test("secondsPerDay are greater than 1440", () => {
 test("secondsPerDay are not greater than 86401", () => {
   expect(secondsPerDay()).not.toBeGreaterThan(86400);
 });
+
+// Matcher: toBeGreaterThanOrEqual
+
+test("secondsPerDay are greater than or equal to 86400", () => {
+  expect(secondsPerDay()).toBeGreaterThanOrEqual(86400);
+});
+
+// Matcher: not.toBeGreaterThanOrEqual
+
+test("secondsPerDay are not greater than or equal to 86401", () => {
+  expect(secondsPerDay()).not.toBeGreaterThanOrEqual(86401);
+});
