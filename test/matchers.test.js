@@ -113,7 +113,7 @@ test("seconds per day are not greater than or equal to 86401", () => {
 // Matcher: toBeLessThan
 
 const millisecondsPerYear = () => {
-  return (86400 * 1000) * 365;
+  return (86400 * 1000) * 365.25;
 };
 
 test("milliseconds per year are less than 50 billion", () => {
@@ -124,4 +124,10 @@ test("milliseconds per year are less than 50 billion", () => {
 
 test("milliseconds per year are not less than 30 billion", () => {
   expect(millisecondsPerYear()).not.toBeLessThan(30000000000);
+});
+
+// Matcher: toBe (number)
+
+test("milliseconds per year are 31,557,600,000", () => {
+  expect(millisecondsPerYear()).toBe(31557600000);
 });
