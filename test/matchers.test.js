@@ -131,3 +131,9 @@ test("milliseconds per year are not less than 30 billion", () => {
 test("milliseconds per year are 31,557,600,000", () => {
   expect(millisecondsPerYear()).toBe(31557600000);
 });
+
+// Matcher not.toBe (number)
+
+test("milliseconds per year are not 32,000,000,000", () => {
+  expect(millisecondsPerYear()).not.toBe(32000000000);
+});
