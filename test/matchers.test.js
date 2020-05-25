@@ -81,3 +81,19 @@ test("the peripherals list does not have 100 elements", () => {
 test("groceries list does not have 3 elements", () => {
   expect(groceries).not.toHaveLength(3);
 });
+
+// Matcher: toBeGreaterThan
+
+const secondsPerDay = () => {
+  return 24 * 60 * 60;
+};
+
+test("secondsPerDay are greater than 1440", () => {
+  expect(secondsPerDay()).toBeGreaterThan(1440);
+});
+
+// Matcher not.toBeGreaterThan
+
+test("secondsPerDay are not greater than 86401", () => {
+  expect(secondsPerDay()).not.toBeGreaterThan(86400);
+});
