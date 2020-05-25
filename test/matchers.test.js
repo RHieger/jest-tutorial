@@ -88,24 +88,40 @@ const secondsPerDay = () => {
   return 24 * 60 * 60;
 };
 
-test("secondsPerDay are greater than 1440", () => {
+test("seconds per day are greater than 1440", () => {
   expect(secondsPerDay()).toBeGreaterThan(1440);
 });
 
 // Matcher not.toBeGreaterThan
 
-test("secondsPerDay are not greater than 86401", () => {
+test("seconds per day are not greater than 86401", () => {
   expect(secondsPerDay()).not.toBeGreaterThan(86400);
 });
 
 // Matcher: toBeGreaterThanOrEqual
 
-test("secondsPerDay are greater than or equal to 86400", () => {
+test("seconds per day are greater than or equal to 86400", () => {
   expect(secondsPerDay()).toBeGreaterThanOrEqual(86400);
 });
 
 // Matcher: not.toBeGreaterThanOrEqual
 
-test("secondsPerDay are not greater than or equal to 86401", () => {
+test("seconds per day are not greater than or equal to 86401", () => {
   expect(secondsPerDay()).not.toBeGreaterThanOrEqual(86401);
+});
+
+// Matcher: toBeLessThan
+
+const millisecondsPerYear = () => {
+  return (86400 * 1000) * 365;
+};
+
+test("milliseconds per year are less than 50 billion", () => {
+  expect(millisecondsPerYear()).toBeLessThan(50000000000);
+});
+
+// Matcher: not.toBeLessThan
+
+test("milliseconds per year are not less than 30 billion", () => {
+  expect(millisecondsPerYear()).not.toBeLessThan(30000000000);
 });
