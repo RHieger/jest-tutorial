@@ -71,3 +71,13 @@ test("the peripherals list has 10 elements", () => {
 test("groceries list has 14 elements", () => {
   expect(groceries).toHaveLength(14);
 });
+
+// Matcher: not toHaveLength
+
+test("the peripherals list does not have 100 elements", () => {
+  expect(peripherals).not.toHaveLength(100);
+});
+
+test("groceries list does not have 3 elements", () => {
+  expect(groceries).not.toHaveLength(3);
+});
