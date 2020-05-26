@@ -152,7 +152,7 @@ test(`milliseconds per year are not less than
   expect(millisecondsPerYear()).not.toBeLessThanOrEqual(31557599000);
 });
 
-// Matcher toContainEqual(item)
+// Matcher: toContainEqual(item)
 
 const people = [
   { name: "Joe Smith", age: 32, sex: "male" },
@@ -164,4 +164,35 @@ const people = [
 test("name is Jennifer James and sex is not male", () => {
   const myPerson = { name: "Jennifer James", age: 35, sex: "female" };
   expect(people).toContainEqual(myPerson);
+});
+
+// Matcher: toEqual
+
+const can1 = {
+  contents: "kidney beans",
+  ounces: 12
+};
+
+const can2 = {
+  contents: "kidney beans",
+  ounces: 12
+};
+
+const can3 = {
+  contents: "lentils",
+  ounces: 16
+};
+
+const can4 = {
+  contents: "fava beans",
+  ounces: 12
+};
+
+describe("the canned legumes", () => {
+  test("are the same exact cans", () => {
+    expect(can2).toEqual(can1);
+  });
+  test("have different ingredients and number of ounces", () => {
+    expect(can4).not.toEqual(can3);
+  });
 });
