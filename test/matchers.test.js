@@ -189,7 +189,7 @@ const can4 = {
 };
 
 describe("the canned legumes", () => {
-  test("are the same exact cans", () => {
+  test("have the same ingredients and ounces per can", () => {
     expect(can2).toEqual(can1);
   });
   test("have different ingredients and number of ounces", () => {
