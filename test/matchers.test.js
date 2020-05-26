@@ -137,3 +137,18 @@ test("milliseconds per year are 31,557,600,000", () => {
 test("milliseconds per year are not 32,000,000,000", () => {
   expect(millisecondsPerYear()).not.toBe(32000000000);
 });
+
+// Matcher: toBeLessThanOrEqual
+
+test("milliseconds per year are less than or equal to 31,557,601,000",
+  () => {
+    expect(millisecondsPerYear()).toBeLessThanOrEqual(31557601000);
+  });
+
+// Matcher: not.toBeLessThanOrEqual
+
+test(`milliseconds per year are not less than
+    or equal to 31,557,599,000
+`, () => {
+  expect(millisecondsPerYear()).not.toBeLessThanOrEqual(31557599000);
+});
