@@ -274,3 +274,21 @@ describe("toMatchObject appled to 3 objects", () => {
     expect(car3).not.toMatchObject(car2);
   });
 });
+
+// Matchers: toBeDefined/not.toBeDefined
+
+describe("toBeDefined", () => {
+  const workDays = undefined;
+  const myWorkDays = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday"
+  ];
+  test("myWorkDays are defined", () => {
+    expect(myWorkDays).toBeDefined();
+  });
+  test("workDays is not defined", () => {
+    expect(workDays).not.toBeDefined();
+  });
+});
