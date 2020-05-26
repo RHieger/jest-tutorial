@@ -196,3 +196,22 @@ describe("the canned legumes", () => {
     expect(can4).not.toEqual(can3);
   });
 });
+
+// Matcher: toBeNull
+
+const message = () => {
+  return null;
+};
+
+const message2 = () => {
+  return "This message is not null.";
+}
+
+describe("this object", () => {
+  test("is null", () => {
+    expect(message()).toBeNull();
+  });
+  test("is not null", () => {
+    expect(message2()).not.toBeNull();
+  });
+});
