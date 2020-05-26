@@ -148,7 +148,20 @@ test("milliseconds per year are less than or equal to 31,557,601,000",
 // Matcher: not.toBeLessThanOrEqual
 
 test(`milliseconds per year are not less than
-    or equal to 31,557,599,000
-`, () => {
+    or equal to 31,557,599,000`, () => {
   expect(millisecondsPerYear()).not.toBeLessThanOrEqual(31557599000);
+});
+
+// Matcher toContainEqual(item)
+
+const people = [
+  { name: "Joe Smith", age: 32, sex: "male" },
+  { name: "Jo Green", age: 28, sex: "female" },
+  { name: "Jennifer James", age: 35, sex: "female" },
+  { name: "Robert Roth", age: 52, sex: "male" }
+];
+
+test("name is Jennifer James and sex is not male", () => {
+  const myPerson = { name: "Jennifer James", age: 35, sex: "female" };
+  expect(people).toContainEqual(myPerson);
 });
