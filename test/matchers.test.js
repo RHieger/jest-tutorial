@@ -292,3 +292,84 @@ describe("toBeDefined", () => {
     expect(workDays).not.toBeDefined();
   });
 });
+
+// Matchers: toHaveProperty/not.toHaveProperty
+
+const macBookPro1 = {
+  size: "13 inches",
+  displayType: "Retina/True Tone Technology",
+  processor: "Intel i7 quad core 2.3GHz",
+  turboRating: "4.1GHz",
+  gigsOfRAM: 32,
+  storage: "1TB SSD",
+  gpu: "Intel Iris Plus Graphics 32GB RAM"
+};
+
+const macBookPro2 = {
+  size: "16 inches",
+  displayType: "Retina/True Tone Technology",
+  processor: "Intel i9 8 core 2.4GHz",
+  turboRating: "5.0GHz",
+  gigsOfRAM: 64,
+  storage: "2TB SSD",
+  gpu: "AMD Radeon Pro 5500M 8GB GDDR6 RAM"
+};
+
+describe("toHaveProperty", () => {
+  test("macBookPro2 has 16 inch screen", () => {
+    expect(macBookPro2).toHaveProperty("size", "16 inches");
+  });
+  test("macBookPro2 has Retina/True Tone technology display", () => {
+    expect(macBookPro2)
+      .toHaveProperty("displayType", "Retina/True Tone Technology");
+  });
+  test("macBookPro2 has Intel i9 8 core 2.4GHz processor",
+    () => {
+      expect(macBookPro2)
+        .toHaveProperty("processor", "Intel i9 8 core 2.4GHz");
+    });
+  test("macBookPro2 has processor turbo rating of 5.0GHz",
+    () => {
+      expect(macBookPro2).toHaveProperty("turboRating", "5.0GHz");
+    });
+  test("macBookPro2 has 64GB of RAM", () => {
+    expect(macBookPro2).toHaveProperty("gigsOfRAM", 64);
+  });
+  test("macBookPro2 has a 2TB SSD", () => {
+    expect(macBookPro2).toHaveProperty("storage", "2TB SSD");
+  });
+  test(`macBookPro2 has an AMD Radeon Pro 5500M
+      with 8GB GDDR6 RAM`, () => {
+    expect(macBookPro2)
+      .toHaveProperty("gpu", "AMD Radeon Pro 5500M 8GB GDDR6 RAM");
+  });
+});
+
+describe("not.toHaveProperty", () => {
+  test("macBookPro1 does not have 16 inch display", () => {
+    expect(macBookPro1).not.toHaveProperty("size", "16 inches");
+  });
+  test("macBookPro1 does not have Intel i9 8 core 2.4GHz processor",
+    () => {
+      expect(macBookPro1).not
+        .toHaveProperty(
+          "processor", "Intel i9 8 core 2.4GHz processor"
+        );
+    });
+  test(`macBookPro1 does not have processor turbo rating
+      of 5.0GHz`, () => {
+    expect(macBookPro1).not
+      .toHaveProperty("turboRating", "5.0GHz");
+  });
+  test("macBookPro1 does not have 64GB of RAM", () => {
+    expect(macBookPro1).not.toHaveProperty("gigsOfRAM", 64);
+  });
+  test("macBookPro1 does not have a 2TB SSD", () => {
+    expect(macBookPro1).not.toHaveProperty("storage", "2TB SSD");
+  });
+  test(`macBookPro1 does not have an AMD Radeon Pro 5500M
+      with 8GB GDDR6 RAM`, () => {
+    expect(macBookPro1).not
+      .toHaveProperty("gpu", "AMD Radeon Pro 5500M 8GB GDDR6 RAM");
+  });
+});
