@@ -215,3 +215,16 @@ describe("this object", () => {
     expect(message2()).not.toBeNull();
   });
 });
+
+// Matchers: toBeUndefined/not.toBeUndefined
+
+describe("my favorite drink", () => {
+  const drink1 = undefined;
+  const drink2 = "Jameson Whiskey";
+  test("is undefined", () => {
+    expect(drink1).toBeUndefined();
+  });
+  test("is Jameson Whiskey", () => {
+    expect(drink2).not.toBeUndefined();
+  });
+});
