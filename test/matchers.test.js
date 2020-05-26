@@ -242,3 +242,35 @@ describe("NaN", () => {
     expect(num2).not.toBeNaN();
   });
 });
+
+// Matchers: toMatchObject
+
+const car1 = {
+  make: "Honda",
+  model: "Accord",
+  type: "Hybrid",
+  year: 2020
+};
+
+const car2 = {
+  make: "Toyota",
+  model: "Prius",
+  type: "Hybrid",
+  year: 2018
+};
+
+const car3 = {
+  make: "Honda",
+  model: "Accord",
+  type: "Hybrid",
+  year: 2020
+};
+
+describe("toMatchObject appled to 3 objects", () => {
+  test("both car1 and car3 meet my requirements", () => {
+    expect(car3).toMatchObject(car1);
+  });
+  test("car2 and car3 are different cars", () => {
+    expect(car3).not.toMatchObject(car2);
+  });
+});
