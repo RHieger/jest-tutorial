@@ -228,3 +228,17 @@ describe("my favorite drink", () => {
     expect(drink2).not.toBeUndefined();
   });
 });
+
+// Matchers: toBeNaN
+
+const num1 = NaN;
+const num2 = 365.25;
+
+describe("NaN", () => {
+  test("num1 is NaN", () => {
+    expect(num1).toBeNaN();
+  });
+  test("num2 is not NaN", () => {
+    expect(num2).not.toBeNaN();
+  });
+});
