@@ -33,8 +33,8 @@ describe("reverse", () => {
 
   describe("when the string contains emojis", () => {
 
-    it.skip("returns the characters in reverse order", () => {
-      expect(reverse("😎🤔😵")).toEqual("😵🤔🙂");
+    it("returns the characters in reverse order", () => {
+      expect(reverse("😎🤔😵")).toEqual("😵🤔😎");
     });
   });
 });
